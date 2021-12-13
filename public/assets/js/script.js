@@ -33,8 +33,8 @@ $animalForm.addEventListener('submit', handleAnimalFormSubmit);
 fetch('/api/animals', {
   method: 'POST',
   headers: {
-    Accept: 'data/animals.json',
-    'Content-Type': 'data/animals.json'
+    Accept: 'application/json',
+    'Content-Type': 'application/json'
   },
   body: JSON.stringify(animalObject)
 })
