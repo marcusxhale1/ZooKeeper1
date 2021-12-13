@@ -28,12 +28,13 @@ const handleAnimalFormSubmit = event => {
 
 };
 
+$animalForm.addEventListener('submit', handleAnimalFormSubmit);
 
 fetch('/api/animals', {
   method: 'POST',
   headers: {
-    Accept: './data/animals.json',
-    'Content-Type': './data/animals.json'
+    Accept: 'data/animals.json',
+    'Content-Type': 'data/animals.json'
   },
   body: JSON.stringify(animalObject)
 })
@@ -47,5 +48,3 @@ fetch('/api/animals', {
     console.log(postResponse);
     alert('Thank you for adding an animal!');
   });
-
-  $animalForm.addEventListener('submit', handleAnimalFormSubmit);
